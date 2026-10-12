@@ -1,0 +1,239 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+000000000000000000000168 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmActions.swift; sourceTree = "<group>"; };
+000000000000000000000169 = {isa = PBXBuildFile; fileRef = 000000000000000000000168; };
+00000000000000000000015E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditOperation.swift; sourceTree = "<group>"; };
+00000000000000000000015F = {isa = PBXBuildFile; fileRef = 00000000000000000000015E; };
+00000000000000000000012C = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
+000000000000000000000136 = {isa = PBXBuildFile; fileRef = 00000000000000000000012C; };
+00000000000000000000012D = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+000000000000000000000137 = {isa = PBXBuildFile; fileRef = 00000000000000000000012D; };
+000000000000000000000140 = {isa = PBXVariantGroup; children = (00000000000000000000014A, 00000000000000000000014B); name = Localizable.strings; sourceTree = "<group>"; };
+00000000000000000000014A = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+00000000000000000000014B = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+000000000000000000000154 = {isa = PBXBuildFile; fileRef = 000000000000000000000140; };
+000000000000000000000141 = {isa = PBXVariantGroup; children = (00000000000000000000014C, 00000000000000000000014D); name = InfoPlist.strings; sourceTree = "<group>"; };
+00000000000000000000014C = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+00000000000000000000014D = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+000000000000000000000155 = {isa = PBXBuildFile; fileRef = 000000000000000000000141; };
+
+/* Begin PBXBuildFile section */
+		0000000000000000000000C8 /* AlarmRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000064 /* AlarmRecord.swift */; };
+		0000000000000000000000C9 /* AlarmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000065 /* AlarmStore.swift */; };
+		0000000000000000000000CB /* JikimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000067 /* JikimApp.swift */; };
+		0000000000000000000000CC /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* AlarmListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000006 /* Jikim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Jikim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000064 /* AlarmRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRecord.swift; sourceTree = "<group>"; };
+		000000000000000000000065 /* AlarmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStore.swift; sourceTree = "<group>"; };
+		000000000000000000000067 /* JikimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikimApp.swift; sourceTree = "<group>"; };
+		000000000000000000000068 /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000003 /* Jikim */,
+				000000000000000000000004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000003 /* Jikim */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000064 /* AlarmRecord.swift */,
+				000000000000000000000065 /* AlarmStore.swift */,
+				000000000000000000000067 /* JikimApp.swift */,
+				000000000000000000000068 /* AlarmListView.swift */,
+                000000000000000000000168,
+                00000000000000000000015E,
+				00000000000000000000012C,
+				00000000000000000000012D,
+				000000000000000000000140,
+				000000000000000000000141,
+
+			);
+			path = Jikim;
+			sourceTree = "<group>";
+		};
+		000000000000000000000004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000006 /* Jikim.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000005 /* Jikim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00000000000000000000000B /* Build configuration list for PBXNativeTarget "Jikim" */;
+			buildPhases = (
+				000000000000000000000007 /* Sources */,
+				000000000000000000000008 /* Frameworks */,
+				000000000000000000000009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jikim;
+			productName = Jikim;
+			productReference = 000000000000000000000006 /* Jikim.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 2600;
+			};
+			buildConfigurationList = 00000000000000000000000A /* Build configuration list for PBXProject "Jikim" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ko;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ko,
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000002;
+			productRefGroup = 000000000000000000000004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000005 /* Jikim */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000154,
+				000000000000000000000155,
+
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0000000000000000000000C8 /* AlarmRecord.swift in Sources */,
+				0000000000000000000000C9 /* AlarmStore.swift in Sources */,
+				0000000000000000000000CB /* JikimApp.swift in Sources */,
+				0000000000000000000000CC /* AlarmListView.swift in Sources */,
+                000000000000000000000169,
+                00000000000000000000015F,
+				000000000000000000000136,
+				000000000000000000000137,
+
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		00000000000000000000000C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		00000000000000000000000D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		00000000000000000000000E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5MH3Q5HFP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Jikim/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccrtpie.jikim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		00000000000000000000000F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5MH3Q5HFP;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Jikim/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccrtpie.jikim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00000000000000000000000A /* Build configuration list for PBXProject "Jikim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000000000000000000C /* Debug */,
+				00000000000000000000000D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00000000000000000000000B /* Build configuration list for PBXNativeTarget "Jikim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000000000000000000E /* Debug */,
+				00000000000000000000000F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000001 /* Project object */;
+}
