@@ -34,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		000000000000000000000006 /* just alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "just alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000006 /* justalarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "justalarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		000000000000000000000064 /* AlarmRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRecord.swift; sourceTree = "<group>"; };
 		000000000000000000000065 /* AlarmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStore.swift; sourceTree = "<group>"; };
 		000000000000000000000067 /* JustAlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustAlarmApp.swift; sourceTree = "<group>"; };
@@ -55,12 +55,12 @@
 		000000000000000000000002 = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000003 /* just alarm */,
+				000000000000000000000003 /* justalarm */,
 				000000000000000000000004 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		000000000000000000000003 /* just alarm */ = {
+		000000000000000000000003 /* justalarm */ = {
 			isa = PBXGroup;
 			children = (
 				000000000000000000000064 /* AlarmRecord.swift */,
@@ -77,14 +77,14 @@
 				000000000000000000000141,
 
 			);
-			name = "just alarm";
+			name = "justalarm";
 			path = JustAlarm;
 			sourceTree = "<group>";
 		};
 		000000000000000000000004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000006 /* just alarm.app */,
+				000000000000000000000006 /* justalarm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		000000000000000000000005 /* just alarm */ = {
+		000000000000000000000005 /* justalarm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00000000000000000000000B /* Build configuration list for PBXNativeTarget "just alarm" */;
+			buildConfigurationList = 00000000000000000000000B /* Build configuration list for PBXNativeTarget "justalarm" */;
 			buildPhases = (
 				000000000000000000000007 /* Sources */,
 				000000000000000000000008 /* Frameworks */,
@@ -104,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = "just alarm";
-			productName = "just alarm";
-			productReference = 000000000000000000000006 /* just alarm.app */;
+			name = "justalarm";
+			productName = "justalarm";
+			productReference = 000000000000000000000006 /* justalarm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +117,7 @@
 			attributes = {
 				LastUpgradeCheck = 2600;
 			};
-			buildConfigurationList = 00000000000000000000000A /* Build configuration list for PBXProject "just alarm" */;
+			buildConfigurationList = 00000000000000000000000A /* Build configuration list for PBXProject "justalarm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = ko;
 			hasScannedForEncodings = 0;
@@ -131,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				000000000000000000000005 /* just alarm */,
+				000000000000000000000005 /* justalarm */,
 			);
 		};
 /* End PBXProject section */
@@ -228,7 +228,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00000000000000000000000A /* Build configuration list for PBXProject "just alarm" */ = {
+		00000000000000000000000A /* Build configuration list for PBXProject "justalarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00000000000000000000000C /* Debug */,
@@ -237,7 +237,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00000000000000000000000B /* Build configuration list for PBXNativeTarget "just alarm" */ = {
+		00000000000000000000000B /* Build configuration list for PBXNativeTarget "justalarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00000000000000000000000E /* Debug */,
