@@ -127,7 +127,7 @@ struct JikimMetadata: AlarmMetadata {}
         case permission, storage
         var errorDescription: String? {
             switch self {
-            case .permission: AppLanguage.current.text("설정에서 지킴의 알람 권한을 허용해 주세요.")
+            case .permission: AppLanguage.current.text("설정에서 just alarm의 알람 권한을 허용해 주세요.")
             case .storage: AppLanguage.current.text("저장 데이터를 읽지 못해 변경을 중단했습니다.")
             }
         }

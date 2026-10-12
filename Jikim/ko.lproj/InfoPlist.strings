@@ -1,2 +1,2 @@
-"CFBundleDisplayName" = "지킴";
+"CFBundleDisplayName" = "just alarm";
 "NSAlarmKitUsageDescription" = "설정한 시간에 알람을 울리기 위해 권한이 필요합니다.";
