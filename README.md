@@ -19,8 +19,8 @@
 
 ## 아이폰에서 실행
 
-1. `JustAlarm.xcodeproj`를 Xcode에서 엽니다.
-2. JustAlarm 대상의 Signing & Capabilities에서 본인의 개발 팀과 고유 Bundle Identifier를 확인합니다. 기존 설정을 유지했습니다.
+1. `just alarm.xcodeproj`를 Xcode에서 엽니다.
+2. `just alarm` 대상의 Signing & Capabilities에서 본인의 개발 팀과 고유 Bundle Identifier를 확인합니다. 기존 설정을 유지했습니다.
 3. iOS 26 이상 아이폰을 Mac에 연결하고 실행 대상으로 선택합니다. 필요하면 아이폰의 개발자 모드를 켭니다.
 4. 실행 후 첫 알람을 추가하면서 알람 권한을 허용합니다.
 
@@ -73,6 +73,6 @@ Apple 문서: https://developer.apple.com/documentation/alarmkit
 
 시간·반복 요일 편집 또는 끄기는 건너뛰기를 취소합니다. 이름만 편집하면 건너뛰기를 유지합니다. 일회성 날짜 예약은 생성 시점의 시간대를 사용하므로 여행 시 다시 확인하세요. 8개의 예약이 시스템 한도를 초과하면 오류를 안내하고 기존 예약을 복구합니다. 일부 예약 취소·생성·저장 실패에도 가능한 한 이전 예약을 복구하며, 복구 실패는 명시적으로 알립니다.
 
-프로젝트·실행 대상·소스 폴더는 `JustAlarm`, 앱 표시 이름은 `just alarm`입니다. 기존 설치의 알람 데이터를 보존하기 위해 Bundle Identifier와 내부 데이터 저장 경로는 유지했습니다. 아이콘 제작 정보는 `Design/AppIcon.md`를 참고하세요.
+프로젝트·실행 대상·앱 표시 이름은 `just alarm`입니다. Swift 소스 폴더와 모듈 이름은 `JustAlarm`입니다. 기존 설치의 알람 데이터를 보존하기 위해 Bundle Identifier와 내부 데이터 저장 경로는 유지했습니다. 아이콘 제작 정보는 `Design/AppIcon.md`를 참고하세요.
 
 검증: 아이폰 빌드, 다음 한 번 제외, 평일/주간 반복, 일광절약시간 전환, 8회 예약 및 저장 복원, 복수 예약 교체와 실패 복구를 테스트했습니다. 실제 아이폰에서 울림·알람 권한·시스템 예약 한도 동작은 추가 확인이 필요합니다.
