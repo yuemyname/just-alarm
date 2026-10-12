@@ -5,6 +5,10 @@
 	};
 	objectVersion = 56;
 	objects = {
+00000000000000000000017C = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSkipPlan.swift; sourceTree = "<group>"; };
+00000000000000000000017D = {isa = PBXBuildFile; fileRef = 00000000000000000000017C; };
+000000000000000000000172 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+000000000000000000000173 = {isa = PBXBuildFile; fileRef = 000000000000000000000172; };
 000000000000000000000168 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmActions.swift; sourceTree = "<group>"; };
 000000000000000000000169 = {isa = PBXBuildFile; fileRef = 000000000000000000000168; };
 00000000000000000000015E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditOperation.swift; sourceTree = "<group>"; };
@@ -25,15 +29,15 @@
 /* Begin PBXBuildFile section */
 		0000000000000000000000C8 /* AlarmRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000064 /* AlarmRecord.swift */; };
 		0000000000000000000000C9 /* AlarmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000065 /* AlarmStore.swift */; };
-		0000000000000000000000CB /* JikimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000067 /* JikimApp.swift */; };
+		0000000000000000000000CB /* JustAlarmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000067 /* JustAlarmApp.swift */; };
 		0000000000000000000000CC /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* AlarmListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		000000000000000000000006 /* Jikim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Jikim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000006 /* JustAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = JustAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		000000000000000000000064 /* AlarmRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRecord.swift; sourceTree = "<group>"; };
 		000000000000000000000065 /* AlarmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStore.swift; sourceTree = "<group>"; };
-		000000000000000000000067 /* JikimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikimApp.swift; sourceTree = "<group>"; };
+		000000000000000000000067 /* JustAlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustAlarmApp.swift; sourceTree = "<group>"; };
 		000000000000000000000068 /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,18 +55,20 @@
 		000000000000000000000002 = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000003 /* Jikim */,
+				000000000000000000000003 /* JustAlarm */,
 				000000000000000000000004 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		000000000000000000000003 /* Jikim */ = {
+		000000000000000000000003 /* JustAlarm */ = {
 			isa = PBXGroup;
 			children = (
 				000000000000000000000064 /* AlarmRecord.swift */,
 				000000000000000000000065 /* AlarmStore.swift */,
-				000000000000000000000067 /* JikimApp.swift */,
+				000000000000000000000067 /* JustAlarmApp.swift */,
 				000000000000000000000068 /* AlarmListView.swift */,
+                00000000000000000000017C,
+                000000000000000000000172,
                 000000000000000000000168,
                 00000000000000000000015E,
 				00000000000000000000012C,
@@ -71,13 +77,13 @@
 				000000000000000000000141,
 
 			);
-			path = Jikim;
+			path = JustAlarm;
 			sourceTree = "<group>";
 		};
 		000000000000000000000004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000006 /* Jikim.app */,
+				000000000000000000000006 /* JustAlarm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		000000000000000000000005 /* Jikim */ = {
+		000000000000000000000005 /* JustAlarm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00000000000000000000000B /* Build configuration list for PBXNativeTarget "Jikim" */;
+			buildConfigurationList = 00000000000000000000000B /* Build configuration list for PBXNativeTarget "JustAlarm" */;
 			buildPhases = (
 				000000000000000000000007 /* Sources */,
 				000000000000000000000008 /* Frameworks */,
@@ -97,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = Jikim;
-			productName = Jikim;
-			productReference = 000000000000000000000006 /* Jikim.app */;
+			name = JustAlarm;
+			productName = JustAlarm;
+			productReference = 000000000000000000000006 /* JustAlarm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +116,7 @@
 			attributes = {
 				LastUpgradeCheck = 2600;
 			};
-			buildConfigurationList = 00000000000000000000000A /* Build configuration list for PBXProject "Jikim" */;
+			buildConfigurationList = 00000000000000000000000A /* Build configuration list for PBXProject "JustAlarm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = ko;
 			hasScannedForEncodings = 0;
@@ -124,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				000000000000000000000005 /* Jikim */,
+				000000000000000000000005 /* JustAlarm */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+                000000000000000000000173,
 				000000000000000000000154,
 				000000000000000000000155,
 
@@ -149,8 +156,9 @@
 			files = (
 				0000000000000000000000C8 /* AlarmRecord.swift in Sources */,
 				0000000000000000000000C9 /* AlarmStore.swift in Sources */,
-				0000000000000000000000CB /* JikimApp.swift in Sources */,
+				0000000000000000000000CB /* JustAlarmApp.swift in Sources */,
 				0000000000000000000000CC /* AlarmListView.swift in Sources */,
+                00000000000000000000017D,
                 000000000000000000000169,
                 00000000000000000000015F,
 				000000000000000000000136,
@@ -186,9 +194,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G5MH3Q5HFP;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Jikim/Info.plist;
+				INFOPLIST_FILE = JustAlarm/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccrtpie.jikim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -201,9 +210,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G5MH3Q5HFP;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Jikim/Info.plist;
+				INFOPLIST_FILE = JustAlarm/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccrtpie.jikim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -215,7 +225,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00000000000000000000000A /* Build configuration list for PBXProject "Jikim" */ = {
+		00000000000000000000000A /* Build configuration list for PBXProject "JustAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00000000000000000000000C /* Debug */,
@@ -224,7 +234,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00000000000000000000000B /* Build configuration list for PBXNativeTarget "Jikim" */ = {
+		00000000000000000000000B /* Build configuration list for PBXNativeTarget "JustAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00000000000000000000000E /* Debug */,

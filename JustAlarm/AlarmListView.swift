@@ -7,6 +7,8 @@ struct AlarmListView: View {
     @State private var query = ""
     @State private var deletionIDs: [UUID] = []
     @State private var confirmDeletion = false
+    @State private var skipID: UUID?
+    @State private var confirmSkip = false
     @Environment(\.scenePhase) private var phase
     @Environment(\.locale) private var locale
     private var language: AppLanguage { AppLanguage(locale: locale) }
@@ -34,6 +36,19 @@ struct AlarmListView: View {
                                         Text(verbatim: record.displayTitle(in: language))
                                         Text(verbatim: "· " + record.repeatText(in: language))
                                     }.font(.subheadline).foregroundStyle(.secondary)
+                                    if let plan = record.skipPlan, record.isEnabled {
+                                        Label {
+                                            Text("다음 알람 건너뜀")
+                                            Text(plan.skippedDate, format: .dateTime.month().day().hour().minute())
+                                        } icon: { Image(systemName: "forward.end") }
+                                        .font(.caption).foregroundStyle(.orange)
+                                        if let end = plan.endDate {
+                                            HStack(spacing: 4) {
+                                                Text("예약 기한")
+                                                Text(end, format: .dateTime.year().month().day().hour().minute())
+                                            }.font(.caption).foregroundStyle(.secondary)
+                                        }
+                                    }
                                     if record.isEnabled && !store.activeIDs.contains(record.id) {
                                         Text("예약 없음 · 다시 켜려면 스위치를 누르세요")
                                             .font(.caption).foregroundStyle(.secondary)
@@ -53,12 +68,15 @@ struct AlarmListView: View {
                             } label: { Label("삭제", systemImage: "trash") }
                         }
                         .swipeActions(edge: .leading, allowsFullSwipe: true) {
-                            let enabled = store.activeIDs.contains(record.id)
-                            Button {
-                                Task { _ = await store.perform(enabled ? .disable : .enable, ids: [record.id]) }
-                            } label: {
-                                Label(LocalizedStringKey(enabled ? "끄기" : "켜기"), systemImage: enabled ? "bell.slash" : "bell")
-                            }.tint(enabled ? .gray : .green)
+                            if !record.weekdays.isEmpty && record.isEnabled && (store.activeIDs.contains(record.id) || record.skipPlan != nil) {
+                                Button {
+                                    if record.skipPlan == nil { skipID = record.id; confirmSkip = true }
+                                    else { Task { await store.toggleSkip(record.id) } }
+                                } label: {
+                                    Label(LocalizedStringKey(record.skipPlan == nil ? "한 번 건너뛰기" : "건너뛰기 취소"),
+                                          systemImage: record.skipPlan == nil ? "forward.end" : "arrow.uturn.backward")
+                                }.tint(.orange)
+                            }
                         }
                     }
                 } header: {
@@ -93,6 +111,14 @@ struct AlarmListView: View {
             .overlay { if store.busy { ProgressView("저장 중…").padding().background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16)) } }
             .sheet(item: $editing) { AlarmEditor(record: $0, store: store) }
             .sheet(isPresented: $showSettings) { SettingsView() }
+            .confirmationDialog("다음 한 번을 건너뛸까요?", isPresented: $confirmSkip, titleVisibility: .visible) {
+                Button("한 번 건너뛰기") {
+                    if let id = skipID { Task { await store.toggleSkip(id) } }
+                }
+                Button("취소", role: .cancel) { skipID = nil }
+            } message: {
+                Text("이후 8회분만 미리 예약합니다. 예약 기한 전에 앱을 다시 열어 반복 예약을 복원해 주세요.")
+            }
             .confirmationDialog("선택한 알람을 삭제할까요?", isPresented: $confirmDeletion, titleVisibility: .visible) {
                 Button("삭제", role: .destructive) {
                     let ids = deletionIDs
@@ -107,7 +133,15 @@ struct AlarmListView: View {
             } message: { Text(store.errorMessage ?? "") }
         }.tint(.orange)
         .task { await store.observe() }
-        .onChange(of: phase) { _, value in if value == .active { store.refresh() } }
+        .task {
+            while !Task.isCancelled {
+                if phase == .active { await store.restoreRecurringIfNeeded() }
+                do { try await Task.sleep(for: .seconds(60)) } catch { break }
+            }
+        }
+        .onChange(of: phase) { _, value in
+            if value == .active { store.refresh(); Task { await store.restoreRecurringIfNeeded() } }
+        }
     }
 
     private func runBatch(_ action: AlarmBatchAction) {

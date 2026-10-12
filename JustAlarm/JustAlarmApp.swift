@@ -1,6 +1,6 @@
 import SwiftUI
 
-@main struct JikimApp: App {
+@main struct JustAlarmApp: App {
     @AppStorage(AppLanguage.preferenceKey) private var language = AppLanguage.defaultLanguage.rawValue
 
     var body: some Scene {

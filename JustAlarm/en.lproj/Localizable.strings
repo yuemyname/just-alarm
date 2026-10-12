@@ -69,3 +69,17 @@
 "검색과 빠른 작업" = "Search and Quick Actions";
 "왼쪽으로 밀면 삭제, 오른쪽으로 밀면 알람을 켜거나 끌 수 있습니다." = "Swipe left to delete an alarm. Swipe right to turn it on or off.";
 "시간이나 이름으로 검색한 뒤 아래의 일괄 작업에서 검색 결과를 모두 켜기, 끄기, 삭제할 수 있습니다." = "Search by time or name, then use Bulk Actions at the bottom to turn all matching alarms on or off, or delete them.";
+"다음 알람 건너뜀" = "Skipping next alarm";
+"예약 기한" = "Scheduled through";
+"한 번 건너뛰기" = "Skip Next";
+"건너뛰기 취소" = "Cancel Skip";
+"건너뛰기를 변경하지 못했습니다." = "Couldn’t change the skipped alarm.";
+"반복 알람 복원에 실패했습니다. 표시된 예약 기한을 확인해 주세요." = "Couldn’t restore repeating alarms. Check the displayed scheduling deadline.";
+"왼쪽으로 밀면 삭제, 반복 알람을 오른쪽으로 밀면 다음 한 번을 건너뛰거나 취소할 수 있습니다." = "Swipe left to delete. Swipe right on a repeating alarm to skip the next occurrence or cancel the skip.";
+"다음 알람 한 번을 제외한 이후 8회분을 미리 예약합니다. 목록의 예약 기한 이후에는 알람이 울리지 않습니다." = "After skipping the next occurrence, the following 8 alarms are scheduled in advance. Alarms will not ring beyond the deadline shown in the list.";
+"건너뛸 시간이 지난 뒤 앱을 열면 원래 반복 예약으로 복원됩니다. 예약 기한 전에 앱을 다시 열어 주세요." = "Open the app after the skipped time to restore the original repeating schedule. Please reopen it before the scheduling deadline.";
+"시간이나 반복 요일을 편집하거나 알람을 끄면 건너뛰기가 해제됩니다. 여행으로 시간대가 바뀌면 알람을 다시 확인해 주세요." = "Editing the time or repeat days, or turning the alarm off, cancels the skip. Review your alarms if your time zone changes while traveling.";
+"다음 한 번을 건너뛸까요?" = "Skip the next occurrence?";
+"이후 8회분만 미리 예약합니다. 예약 기한 전에 앱을 다시 열어 반복 예약을 복원해 주세요." = "Only the following 8 occurrences will be scheduled. Reopen the app before the scheduling deadline to restore repeating alarms.";
+"울리는 알람을 먼저 중단한 뒤 다시 시도해 주세요." = "Stop the ringing alarm before trying again.";
+"예약 가능한 알람 개수 한도에 도달했습니다. 다른 알람을 정리한 뒤 다시 시도해 주세요." = "The system alarm limit has been reached. Remove some other alarms and try again.";

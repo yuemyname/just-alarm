@@ -7,6 +7,11 @@ struct AlarmRecord: Identifiable, Codable, Equatable {
     var title = ""
     var weekdays: [Int] = [] // Calendar: Sunday = 1
     var isEnabled = true
+    var skipPlan: AlarmSkipPlan?
+
+    var reservationIDs: Set<UUID> {
+        Set([id] + (skipPlan?.occurrences.map(\.id) ?? []))
+    }
 
     var timeText: String { String(format: "%02d:%02d", hour, minute) }
     func displayTitle(in language: AppLanguage) -> String {
