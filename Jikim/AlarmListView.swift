@@ -27,8 +27,8 @@ struct AlarmListView: View {
                     ForEach(results) { record in
                         HStack(spacing: 16) {
                             Button { editing = record } label: {
-                                VStack(alignment: .leading, spacing: 6) {
-                                    Text(record.timeText).font(.system(size: 48, weight: .light, design: .rounded)).monospacedDigit()
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text(record.timeText).font(.system(size: 38, weight: .light, design: .rounded)).monospacedDigit()
                                         .foregroundStyle(store.activeIDs.contains(record.id) ? .primary : .secondary)
                                     HStack(spacing: 6) {
                                         Text(verbatim: record.displayTitle(in: language))
@@ -46,7 +46,7 @@ struct AlarmListView: View {
                                     Task { _ = await store.perform(enabled ? .enable : .disable, ids: [record.id]) }
                                 }
                             )) { Text(verbatim: record.displayTitle(in: language)) }.labelsHidden().tint(.green)
-                        }.padding(.vertical, 12)
+                        }.padding(.vertical, 6)
                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button(role: .destructive) {
                                 deletionIDs = [record.id]; confirmDeletion = true
