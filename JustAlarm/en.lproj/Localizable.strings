@@ -83,3 +83,5 @@
 "이후 8회분만 미리 예약합니다. 예약 기한 전에 앱을 다시 열어 반복 예약을 복원해 주세요." = "Only the following 8 occurrences will be scheduled. Reopen the app before the scheduling deadline to restore repeating alarms.";
 "울리는 알람을 먼저 중단한 뒤 다시 시도해 주세요." = "Stop the ringing alarm before trying again.";
 "예약 가능한 알람 개수 한도에 도달했습니다. 다른 알람을 정리한 뒤 다시 시도해 주세요." = "The system alarm limit has been reached. Remove some other alarms and try again.";
+
+"시작 화면 건너뛰기" = "Skip intro";

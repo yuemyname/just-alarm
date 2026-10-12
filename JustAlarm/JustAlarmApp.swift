@@ -5,7 +5,7 @@ import SwiftUI
 
     var body: some Scene {
         WindowGroup {
-            AlarmListView()
+            StartupView()
                 .environment(\.locale, (AppLanguage(rawValue: language) ?? .defaultLanguage).locale)
         }
     }
